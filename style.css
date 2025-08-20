@@ -1,0 +1,94 @@
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #74ebd5, #9face6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Quiz container */
+.quiz-container {
+  width: 420px;
+  padding: 25px;
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  animation: fadeIn 0.8s ease-in;
+}
+
+/* Question text */
+.question {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+/* Option buttons */
+.option {
+  display: block;
+  padding: 12px;
+  margin: 10px 0;
+  background: #f1f1f1;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.option:hover {
+  background: #e0e0e0;
+  transform: scale(1.02);
+}
+
+/* Correct & Wrong answers */
+.correct { background: #a8e6a1 !important; color: #155724; font-weight: bold; }
+.wrong { background: #f6a1a1 !important; color: #721c24; font-weight: bold; }
+
+/* Next button */
+#nextBtn {
+  margin-top: 20px;
+  padding: 12px 28px;
+  border: none;
+  background: #007bff;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 10px;
+  cursor: pointer;
+  display: none;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+#nextBtn:hover {
+  background: #0056b3;
+  transform: scale(1.05);
+}
+
+/* Score */
+#score {
+  font-size: 18px;
+  margin-top: 15px;
+  color: #444;
+}
+
+/* Progress bar container */
+.progress-container {
+  width: 100%;
+  height: 10px;
+  background: #eee;
+  border-radius: 6px;
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(to right, #00c6ff, #0072ff);
+  transition: width 0.4s ease;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
